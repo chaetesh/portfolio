@@ -21,18 +21,40 @@ function MyNavbar(props) {
           onClick={() => props.homeClick()}
           style={{ textDecoration: "none" }}
         >
-          <Navbar.Brand style={{ fontSize: "1.5rem", color: "#c770f0",fontWeight:"600" }}>
+          <Navbar.Brand
+            style={{ fontSize: "1.5rem", color: "#c770f0", fontWeight: "600" }}
+          >
             Aetesh
           </Navbar.Brand>
         </Link>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto"></Nav>
+          <Nav className="ms-auto"></Nav>
           <Nav className="gap-5">
-            <Nav.Link onClick={() => props.homeClick()} style={{color:"white"}}>Home</Nav.Link>
-            <Nav.Link onClick={() => props.aboutClick()} style={{color:"white"}}>About</Nav.Link>
-            <Nav.Link onClick={() => props.projectClick()} style={{color:"white"}}>Projects</Nav.Link>
-            <Nav.Link onClick={() => props.contactClick()} style={{color:"white"}}>Contact</Nav.Link>
+            <Nav.Link
+              onClick={() => props.homeClick()}
+              style={{ color: "white" }}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => props.aboutClick()}
+              style={{ color: "white" }}
+            >
+              About
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => props.projectClick()}
+              style={{ color: "white" }}
+            >
+              Projects
+            </Nav.Link>
+            <Nav.Link
+              onClick={() => props.contactClick()}
+              style={{ color: "white" }}
+            >
+              Contact
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

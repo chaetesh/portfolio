@@ -10,31 +10,44 @@ import Contact from "./components/Contact";
 
 function App() {
   const aboutref = useRef(null);
-  const aboutClick = ()=>{
+  const aboutClick = () => {
     aboutref.current?.scrollIntoView({ behavior: "smooth" });
-  }
+  };
   const homeref = useRef(null);
-  const homeClick = ()=>{
+  const homeClick = () => {
     homeref.current?.scrollIntoView({ behavior: "smooth" });
-  }
+  };
   const projectref = useRef(null);
-  const projectClick = ()=>{
+  const projectClick = () => {
     projectref.current?.scrollIntoView({ behavior: "smooth" });
-  }
+  };
   const contactref = useRef(null);
-  const contactClick = ()=>{
+  const contactClick = () => {
     contactref.current?.scrollIntoView({ behavior: "smooth" });
-  }
+  };
 
+  const isMobile = window.matchMedia(
+    "only screen and (max-width: 760px)"
+  ).matches;
+  if (isMobile) {
+    return <div>Sorry, this website is only available on desktop devices.</div>;
+  }
+  else{
   return (
     <div className="App">
-      <MyNavbar aboutClick={aboutClick} homeClick={homeClick} projectClick={projectClick} contactClick={contactClick}></MyNavbar>
+      <MyNavbar
+        aboutClick={aboutClick}
+        homeClick={homeClick}
+        projectClick={projectClick}
+        contactClick={contactClick}
+      ></MyNavbar>
       <Home homeref={homeref}></Home>
       <About aboutref={aboutref}></About>
       <Projects projectref={projectref}></Projects>
       <Contact contactref={contactref}></Contact>
     </div>
   );
+  }
 }
 
 export default App;
