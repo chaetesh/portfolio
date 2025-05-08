@@ -21,7 +21,7 @@ function Home(props) {
           </div>
           <Button
             className="purple-2"
-            href="https://drive.google.com/file/d/15MgAoVOVqnnbEBMOmC1cTwaBsUhnjqyG/view?usp=sharing"
+            href="https://drive.google.com/file/d/12WRWtTnDcq74X9QajetRuUYntLJYcYsy/view?usp=sharing"
             target="_blank"
           >
             {"Resume"} <GoArrowUpRight></GoArrowUpRight>
